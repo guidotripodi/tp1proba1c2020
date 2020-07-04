@@ -96,6 +96,7 @@ hist(allVar$var)
 
 qqplot(allVar$numberOfVariables,allVar$mean)
 
+#Ej 1 g
 
 tcl <- function(xn,mu,v,n){
   return (xn-mu)/sqrt(v/n)
@@ -175,7 +176,7 @@ hist(ej2e)
 ej2f <- c(1:1000)
 var2f<- c(1:1000)
 for (i in 1:1000) {
-  muestra <- runif(1200,0,1)
+  muestra <- rcauchy(1200,0,1)
   xprom <- sum(muestra) * 1/1200
   var2f[i] <- (muestra-xprom)**2/500
   ej2f[i] <- xprom
@@ -184,14 +185,7 @@ todo <- data.frame( ej1=ej2a,ej2=ej2b,ej2c=ej2d,ej4=ej2e,ej5=ej2f,ej6=ej6)
 todo
 boxplot(todo,data=todo)
 
-#Ej 2 G
-meanej1 <- mean(ej1)
-meanej2 <- mean(ej2)
-meanej3 <- mean(ej3)
-meanej4 <- mean(ej4)
-meanej5 <- mean(ej5)
-meanej6 <- mean(ej6)
-
+#Ej 2 Gg
 mvar1 <- var(ej1)
 mvar2 <- mean(var2)
 mvar3 <- mean(var3)
@@ -210,7 +204,7 @@ hist(allVar$var)
 
 qqplot(allVar$numberOfVariables,allVar$mean)
 
-
+#Ej 2 g
 tcl <- function(xn,mu,v,n){
   return (xn-mu)/sqrt(v/n)
 }
