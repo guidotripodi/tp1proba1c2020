@@ -111,8 +111,9 @@ tcl5 <-tcl(meanej5,1/2,1/12,500)
 tcl6 <-tcl(meanej6,1/2,1/12,1200)
 
 hist(c(tcl1,tcl2,tcl3,tcl4,tcl5,tcl6))
+todoIncisoG <- data.frame( ej1=tcl1,ej2=tcl2,ej3=tcl3,ej4=tcl4,ej5=tcl5,ej6=tcl6)
 
-boxplot(x=allVar$numberOfVariables,data=c(tcl1,tcl2,tcl3,tcl4,tcl5,tcl6))
+boxplot(todoIncisoG,data = todoIncisoG)
 
 ################################################
 ##### ARRANCA TODO CON CAUCHY
